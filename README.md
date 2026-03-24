@@ -1,11 +1,12 @@
 # GoldenNest_final
+GoldenNest — Where Luxury Finds a Home
 GoldenNest is a real estate website where users can browse luxury properties across India. It fetches live property data from a public API using HTML, CSS and JavaScript. The main focus of this project is using fetch() to get real-time data and Array HOFs to search, filter and sort that data.
 
 1. Project Purpose
 The idea behind GoldenNest is to build a platform where people can explore premium properties like villas, apartments and penthouses across cities like Delhi, Mumbai, Bangalore and more. Users can search by name, filter by category and sort by price. The project is built to show my understanding of how JavaScript works with real APIs and how to display and manipulate that data on a webpage.
 
 2. The API
-I am using the DummyJSON API which gives free, structured product data in JSON format. I am using the furniture and home category and treating each item as a luxury property listing.
+I am using the DummyJSON API which gives free, structured product data in JSON format. I am treating each product as a luxury property listing.
 
 Base URL: https://dummyjson.com
 Endpoint: /products?limit=100
@@ -45,12 +46,18 @@ cd GoldenNest_final
 Run it
 Just open index.html in your browser. No installation needed since this is plain HTML, CSS and JS.
 You can also right click index.html in VS Code and click "Open with Live Server" to see live changes while coding.
+
 6. Bonus Features
 
 Debouncing on the search bar so it doesn't call the API on every single keystroke
 Loading spinner while data is being fetched
 Pagination to split large property lists into pages
 localStorage to remember liked properties and dark mode between sessions
+
+
+7. Author
+Gagandeep
+GitHub: @gagandeep3016-sudo
 
 
 7. Author
