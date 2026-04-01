@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoldenNest — Where Luxury Finds a Home</title>
+  <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <div class="logo-icon">G</div>
+      <span class="logo-text">GoldenNest</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Buy</a>
+      <a href="#">Rent</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn">☀️</button>
+      <a href="consultation.html"><button class="nav-cta">Get Started</button></a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="#">Buy</a>
+    <a href="#">Rent</a>
+    <a href="#">Contact</a>
+    <a href="consultation.html">Get Started</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-badge">Premium Real Estate Platform</p>
+      <h1>Where Luxury<br>Finds a <span>Home</span></h1>
+      <p class="hero-sub">Discover premium properties that match your lifestyle across India's most prestigious locations</p>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search by property name or category...">
+        <button onclick="handleSearch()">Search</button>
+      </div>
+      <div class="filter-chips">
+        <button class="chip active" onclick="filterType('all', this)">All</button>
+        <button class="chip" onclick="filterType('furniture', this)">🏠 Villa</button>
+        <button class="chip" onclick="filterType('home-decoration', this)">🏢 Apartment</button>
+        <button class="chip" onclick="filterType('lighting', this)">🏙️ Penthouse</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item">
+      <h2>500+</h2>
+      <p>Luxury Properties</p>
+    </div>
+    <div class="stat-item">
+      <h2 id="liveCount">—</h2>
+      <p>Live Listings</p>
+    </div>
+    <div class="stat-item">
+      <h2>98%</h2>
+      <p>Satisfaction Rate</p>
+    </div>
+    <div class="stat-item">
+      <h2>15+</h2>
+      <p>Years Excellence</p>
+    </div>
+  </div>
+
+  <section class="properties-section">
+    <div class="section-top">
+      <div>
+        <p class="section-label">Exclusive Collection</p>
+        <h2 class="section-title">Featured Properties</h2>
+      </div>
+      <select class="sort-select" onchange="handleSort(this.value)">
+        <option value="default">Sort: Default</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating-desc">Top Rated</option>
+      </select>
+    </div>
+    <p class="result-count" id="resultCount"></p>
+    <div class="cards-grid" id="cardsContainer">
+      <div class="loader">
+        <div class="spinner"></div>
+        <p>Fetching properties...</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-section">
+    <p class="section-label">Our Commitment</p>
+    <h2 class="section-title">Why Choose GoldenNest</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">✅</div>
+        <h3>Trusted & Verified</h3>
+        <p>Every property is verified and legally approved for complete peace of mind</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏆</div>
+        <h3>Premium Collection</h3>
+        <p>Handpicked portfolio of the most exclusive luxury properties in India</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">👨‍💼</div>
+        <h3>Expert Consultants</h3>
+        <p>Dedicated luxury property specialists with years of experience</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h3>Concierge Service</h3>
+        <p>Premium 24/7 support with personalized assistance throughout your journey</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Find Your <span>Perfect Property?</span></h2>
+    <p>Let our expert team guide you through an exclusive portfolio of luxury estates</p>
+    <div class="cta-btns">
+      <a href="consultation.html"><button class="cta-primary">Schedule Consultation</button></a>
+      <a href="tour.html"><button class="cta-secondary">Virtual Tour</button></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon">G</div>
+          <span class="logo-text">GoldenNest</span>
+        </div>
+        <p>Where luxury finds a home. Your premier destination for exquisite real estate experiences.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">Buy Property</a>
+        <a href="#">Rent Property</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Property Types</h4>
+        <a href="#">Luxury Villa</a>
+        <a href="#">Apartments</a>
+        <a href="#">Penthouse</a>
+        <a href="#">Commercial</a>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <p>DLF Cyber City, Gurugram</p>
+        <p>+91 124 456 7890</p>
+        <p>luxury@goldennest.in</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GoldenNest by Aarambh Realty. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="page1.js"></script>
+</body>
+</html>
